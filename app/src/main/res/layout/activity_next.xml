@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:background="@color/color_surface"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <Button
+
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btn"
+        android:background="@drawable/iczawgyi"
+        android:paddingHorizontal="@dimen/dp_20"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_50"
+        />
+    <LinearLayout
+        android:layout_below="@id/btn"
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_200">
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:src="@drawable/image"/>
+
+        <RelativeLayout
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+
+            <TextView
+
+                android:id="@+id/title"
+                style="@style/NextText"
+                android:padding="@dimen/dp_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The Advance Of "/>
+
+            <TextView
+
+                android:layout_below="@id/title"
+                style="@style/Text"
+                android:paddingLeft="@dimen/dp_20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The Advance Of "/>
+
+           <RelativeLayout
+               android:layout_alignParentBottom="true"
+               android:orientation="horizontal"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <Button
+                   android:background="@drawable/edtbg"
+                   android:paddingHorizontal="@dimen/dp_20"
+                   android:layout_width="wrap_content"
+                   android:textColor="@color/colorWhite"
+                   android:layout_height="@dimen/dp_50"
+                   android:text="Download"/>
+
+               <com.google.android.material.floatingactionbutton.FloatingActionButton
+                   android:backgroundTint="@color/colorPrimaryDark"
+                   android:layout_width="50dp"
+                   android:layout_alignParentRight="true"
+                   android:layout_height="50dp"
+                   android:src="@drawable/ic_more"/>
+           </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/botton"
+        android:layout_below="@id/topPanel"
+        android:background="@drawable/edtwhite"
+        android:paddingHorizontal="@dimen/dp_20"
+        android:layout_width="wrap_content"
+        android:textColor="@color/color_surface"
+        android:layout_height="@dimen/dp_50"
+        android:text="Download"/>
+
+<TextView
+    android:id="@+id/text"
+  android:padding="15dp"
+    android:textColor="@color/colorWhite"
+    android:layout_below="@id/botton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="မင်္ဂလာပါ "/>
+
+    <Button
+        android:textAllCaps="false"
+        android:id="@+id/more"
+        android:layout_below="@id/text"
+        android:background="@drawable/morebg"
+       android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:layout_height="@dimen/dp_50"
+        android:text="More" />
+
+<View
+  android:layout_margin="10dp"
+    android:layout_below="@id/more"
+    android:layout_width="match_parent"
+    android:layout_height="5dp"
+    android:background="@color/colorWhite"/>
+
+</RelativeLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <RelativeLayout
+        android:id="@+id/home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/categorylist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rcbg" />
+
+        <LinearLayout
+            android:background="@color/color_surface"
+            android:orientation="vertical"
+            android:layout_below="@id/categorylist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Feature List"
+                style="@style/TitleStyle"
+                android:gravity="left"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/featurelist"
+                android:background="@color/color_surfaceLight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Popular List"
+
+                android:id="@+id/categoryName"
+                style="@style/TitleStyle"
+                android:gravity="left"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/popularlist"
+                android:background="@color/color_surfaceLight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:background="@color/color_surface"
+            android:layout_above="@id/bottonNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="100dp"
+                android:src="@drawable/image"
+                android:scaleType="fitXY"
+                android:layout_height="@dimen/dp_100"/>
+            <TextView
+                style="@style/TitleStyle"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="20dp"
+                android:text="Name"/>
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_playl"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            app:menu="@menu/bottomnav"
+            android:id="@+id/bottonNav"
+            app:itemIconTint="@color/colorWhite"
+            app:itemTextColor="@color/colorWhite"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="@color/color_surface"
+            android:layout_height="@dimen/dp_50"/>
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container"/>
+</RelativeLayout>
+
